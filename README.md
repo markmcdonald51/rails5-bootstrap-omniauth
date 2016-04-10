@@ -17,7 +17,7 @@ ensure latest ruby build
 
 ### dev env set-up
 
-on osx, install postgresapp
+on osx, install and run [postgresapp](http://postgresapp.com/)
 
 install required ruby verision (2.3.0 at time of writing)
 
