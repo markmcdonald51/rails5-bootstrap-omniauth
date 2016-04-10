@@ -36,6 +36,16 @@ quick start:
     $ bundle install
     $ rake db:setup
 
+### local email
+
+Mailcatcher is used as a proxy to handle local email
+
+To install and run mailcatcher:
+
+    $ gem install mailcatcher
+    $ mailcatcher
+
+mailcatcher gui is now running at:  http://localhost:1080/
 
 ### unit + integration tests
 

@@ -15,7 +15,6 @@ Rails.application.configure do
   # Enable/disable caching. By default caching is disabled.
   if Rails.root.join('tmp/caching-dev.txt').exist?
     config.action_controller.perform_caching = true
-
     config.action_mailer.perform_caching = false
 
     config.cache_store = :memory_store
@@ -24,11 +23,14 @@ Rails.application.configure do
     }
   else
     config.action_controller.perform_caching = false
-
     config.action_mailer.perform_caching = false
-
     config.cache_store = :null_store
   end
+
+  #mailer settings  (mailcatcher)
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
