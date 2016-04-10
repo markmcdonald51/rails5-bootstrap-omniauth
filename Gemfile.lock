@@ -54,6 +54,9 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.3.5.1)
+      autoprefixer-rails (>= 5.0.0.1)
+      sass (>= 3.3.0)
     builder (3.2.2)
     bullet (5.0.0)
       activesupport (>= 3.0.0)
@@ -153,7 +156,6 @@ GEM
     nio4r (1.2.1)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
-    normalize-rails (3.0.3)
     notiffany (0.0.8)
       nenv (~> 0.1)
       shellany (~> 0.0)
@@ -313,6 +315,7 @@ DEPENDENCIES
   autoprefixer-rails (~> 5.1.11)
   better_errors
   binding_of_caller
+  bootstrap-sass
   bullet
   byebug
   cancancan
@@ -332,7 +335,6 @@ DEPENDENCIES
   listen
   mocha
   newrelic_rpm
-  normalize-rails (~> 3.0.3)
   omniauth-google-oauth2
   pg
   pry
