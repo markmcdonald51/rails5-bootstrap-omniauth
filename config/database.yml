@@ -1,0 +1,22 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  host: localhost
+  database: gs-dev
+
+test:
+  <<: *default
+  host: localhost
+  database: gs-test
+
+# NOTE: production configs are completely overridden by heroku.
+# production:
+#   <<: *default
+#   database: groundsource_production
+#   username: groundsource
+#   password: <%= ENV['GROUNDSOURCE_DATABASE_PASSWORD'] %>
