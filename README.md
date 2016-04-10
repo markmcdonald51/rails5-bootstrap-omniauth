@@ -7,11 +7,11 @@
 
 ### first time ruby set-up via homebrew
 
-* install rbenv
+install rbenv
 
     $ brew install rbenv
 
-* ensure latest ruby build
+ensure latest ruby build
 
     $ brew upgrade ruby-build
 
