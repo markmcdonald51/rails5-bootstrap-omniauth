@@ -42,7 +42,6 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    ansi (1.5.0)
     arel (7.0.0)
     autoprefixer-rails (5.1.11)
       execjs
@@ -148,11 +147,6 @@ GEM
     mime-types-data (3.2016.0221)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
-    minitest-reporters (1.1.8)
-      ansi
-      builder
-      minitest (>= 5.0)
-      ruby-progressbar
     mocha (1.1.0)
       metaclass (~> 0.0.1)
     multi_json (1.11.2)
@@ -246,7 +240,6 @@ GEM
       railties (>= 4.2.0, < 5.1)
     rest-client (1.6.7)
       mime-types (>= 1.16)
-    ruby-progressbar (1.7.5)
     sass (3.4.22)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -334,7 +327,6 @@ DEPENDENCIES
   js-routes
   listen (~> 3.0.5)
   meta_request
-  minitest-reporters
   mocha
   newrelic_rpm
   normalize-rails (~> 3.0.3)

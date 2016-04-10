@@ -57,7 +57,6 @@ group :test, :development do
   gem 'factory_girl_rails'
   gem 'pry-rescue'
   gem 'simplecov'
-  gem 'minitest-reporters'
   gem 'faker'
   gem 'byebug'
   gem 'temping'
