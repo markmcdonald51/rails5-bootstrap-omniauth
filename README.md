@@ -48,6 +48,10 @@ quick start:
 
     $ bundle install
     $ rake db:setup
+    $ rails s
+
+rails server should be running at http://localhost:3000/
+
 
 ### local email
 
