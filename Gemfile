@@ -8,7 +8,7 @@ gem 'pg'
 gem 'devise', '>= 4.0.0.rc2'
 gem 'omniauth-google-oauth2'
 gem 'cancancan'
-gem 'rest-client'
+# gem 'rest-client'
 gem 'active_model_serializers', '>= 0.10.0.rc5'
 
 # front-end related gems
@@ -28,9 +28,6 @@ gem 'autoprefixer-rails', '~>  5.1.11'
 # rack/cors
 gem 'font_assets'
 
-# ENV
-gem 'figaro'
-
 group :production do
   gem 'rails_12factor', '~> 0.0.3'
   gem 'rack-timeout', '~> 0.3.2'
@@ -38,37 +35,44 @@ group :production do
 end
 
 group :development do
+  gem 'figaro'
+  gem 'rubocop', require: false
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'web-console', '~> 3.0'
-  gem 'listen', '~> 3.0.5'
+  gem 'web-console'
+  gem 'listen'
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-watcher-listen'
 
   # LiveReload
-  gem "guard", ">= 2.2.2", :require => false
-  gem "guard-livereload",  :require => false
-  gem "rack-livereload"
-  gem "rb-fsevent",        :require => false
+  gem 'guard', '>= 2.2.2', require: false
+  gem 'guard-livereload', require: false
+  gem 'rack-livereload'
+  gem 'rb-fsevent', require: false
+
+  # CLI utilities
+  gem 'html2slim', require: false
+  gem 'seed_dump', require: false
+
+  gem 'bullet'
+  gem 'foreman'
+  gem 'quiet_assets'
 end
 
 group :test, :development do
+  gem 'byebug'
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-rescue'
+end
+
+group :test do
+  gem 'temping'
   gem 'mocha'
   gem 'factory_girl_rails'
+  gem 'database_rewinder'
+  gem 'shoulda-matchers'
   gem 'pry-rescue'
   gem 'simplecov'
   gem 'faker'
-  gem 'byebug'
-  gem 'temping'
-  gem 'database_rewinder'
-  gem 'shoulda-matchers'
-  gem 'html2slim'
-  gem 'quiet_assets'
-  gem 'pry'
-  gem 'pry-rails'
-  gem 'bullet'
-  gem 'foreman'
-  gem 'seed_dump'
-  gem 'meta_request'
 end
-

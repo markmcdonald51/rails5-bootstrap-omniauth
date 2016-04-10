@@ -1,0 +1,34 @@
+AllCops:
+  Exclude:
+    - 'db/schema.rb'
+    - 'bin/**/*'
+    - 'config/initializers/devise.rb'
+    - 'db/migrate/*'
+Rails:
+  Enabled: true
+
+Documentation:
+  Enabled: false
+
+LineLength:
+  Max: 130
+
+AbcSize:
+  Max: 25
+
+ClassLength:
+  Max: 200
+
+MethodLength:
+  Max: 25
+
+EmptyLinesAroundClassBody:
+  EnforcedStyle: empty_lines
+  Enabled: false
+
+EmptyLinesAroundModuleBody:
+  EnforcedStyle: empty_lines
+  Enabled: false
+
+ClassAndModuleChildren:
+  Enabled: false
