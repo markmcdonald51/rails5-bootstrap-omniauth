@@ -17,19 +17,32 @@
 
 ### dev env set-up
 
-* on osx, install postgresapp
+on osx, install postgresapp
 
-* clone repo
+install required ruby verision (2.3.0 at time of writing)
 
-* install required ruby verision (2.3.0 at time of writing)
     $ rbenv install 2.3.0
 
-* install bundler
+install bundler
 
     $ gem install bundler
 
 
-* add required config/application.yml file (request from dev)
+add required config/application.yml file (request from dev)
+working sample:
+
+```
+    GOOGLE_OAUTH_CLIENT_ID: xxxx
+    GOOGLE_OAUTH_SECRET: xxx
+    DISABLE_LIVERELOAD: 'yes'
+
+    production:
+      ASSET_HOST: https://xxxxx.cloudfront.net
+
+    stage:
+      ASSET_HOST: https://xxxx.cloudfront.net
+```
+
 
 quick start:
 
