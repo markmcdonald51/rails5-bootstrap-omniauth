@@ -29,7 +29,7 @@ gem 'js-routes'
 # CSS
 gem 'sass-rails', '~> 5.0.3'
 gem 'bootstrap-sass'
-gem 'devise-bootstrap-views'
+# gem 'devise-bootstrap-views'
 gem 'autoprefixer-rails', '~>  5.1.11'
 
 # rack/cors
@@ -64,6 +64,9 @@ group :development do
   gem 'bullet'
   gem 'foreman'
   gem 'quiet_assets'
+
+  # FE generators
+  gem 'rails_layout', require: false
 end
 
 group :test, :development do
