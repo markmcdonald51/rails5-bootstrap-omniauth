@@ -6,7 +6,13 @@ gem 'rails', '>= 5.0.0.beta3', '< 5.1'
 gem 'puma'
 gem 'pg'
 gem 'devise', '>= 4.0.0.rc2'
+
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-linkedin'
 gem 'omniauth-google-oauth2'
+
 gem 'cancancan'
 # gem 'rest-client'
 gem 'active_model_serializers', '>= 0.10.0.rc5'
@@ -23,6 +29,7 @@ gem 'js-routes'
 # CSS
 gem 'sass-rails', '~> 5.0.3'
 gem 'bootstrap-sass'
+gem 'devise-bootstrap-views'
 gem 'autoprefixer-rails', '~>  5.1.11'
 
 # rack/cors
@@ -72,7 +79,6 @@ group :test do
   gem 'factory_girl_rails'
   gem 'database_rewinder'
   gem 'shoulda-matchers'
-  gem 'pry-rescue'
   gem 'simplecov'
   gem 'faker'
 end
