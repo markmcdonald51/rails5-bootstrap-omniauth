@@ -1,11 +1,8 @@
 source 'https://rubygems.org'
-ruby '2.3.0'
 
-# server related gems
-gem 'rails', '>= 5.0.0.beta3', '< 5.1'
-gem 'puma'
-gem 'pg'
-gem 'devise', '>= 4.0.0.rc2'
+gem 'rails', '~> 5.0.0'
+gem 'pg'#, '~> 0.18'
+gem 'puma'#, '~> 3.0'
 
 gem 'omniauth'
 gem 'omniauth-twitter'
@@ -14,74 +11,92 @@ gem 'omniauth-linkedin'
 gem 'omniauth-google-oauth2'
 
 gem 'cancancan'
-# gem 'rest-client'
-gem 'active_model_serializers', '>= 0.10.0.rc5'
+gem 'active_model_serializers'
 
-# front-end related gems
-gem 'slim-rails', '~> 3.0.1'
-gem 'devise-bootstrap-views'
-
-# JS
-gem 'jquery-rails', '~> 4.1.1'
+gem 'slim-rails'
+gem 'sass-rails'#, '~> 5.0'
+gem 'bootstrap-generators'#, '~> 3.3.4'
+gem 'figaro'
+gem 'jquery-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'js-routes'
-
-# CSS
-gem 'sass-rails', '~> 5.0.3'
+gem 'devise-bootstrap-views'
 gem 'bootstrap-sass'
-# gem 'devise-bootstrap-views'
-gem 'autoprefixer-rails', '~>  5.1.11'
-
-# rack/cors
-gem 'font_assets'
+gem 'autoprefixer-rails'
 
 group :production do
-  gem 'rails_12factor', '~> 0.0.3'
-  gem 'rack-timeout', '~> 0.3.2'
-  gem 'newrelic_rpm'
+   gem 'rails_12factor'#, '~> 0.0.3'
+   gem 'rack-timeout'#, '~> 0.3.2'
+   gem 'newrelic_rpm'
+end
+
+
+
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug', platform: :mri
+  gem 'faker'   # generates contacts
 end
 
 group :development do
-  gem 'figaro'
-  gem 'rubocop', require: false
-  gem 'better_errors'
-  gem 'binding_of_caller'
+  # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
-  gem 'listen'
+  gem 'listen', '~> 3.0.5'
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem 'spring-watcher-listen'
-
-  # LiveReload
-  gem 'guard', '>= 2.2.2', require: false
-  gem 'guard-livereload', require: false
-  gem 'rack-livereload'
-  gem 'rb-fsevent', require: false
-
-  # CLI utilities
-  gem 'html2slim', require: false
-  gem 'seed_dump', require: false
-
-  gem 'bullet'
-  gem 'foreman'
-  gem 'quiet_assets'
-
-  # FE generators
-  gem 'rails_layout', require: false
-end
-
-group :test, :development do
-  gem 'byebug'
+  gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'pry'
-  gem 'pry-rails'
-  gem 'pry-rescue'
+
 end
 
-group :test do
-  gem 'temping'
-  gem 'mocha'
-  gem 'factory_girl_rails'
-  gem 'database_rewinder'
-  gem 'shoulda-matchers'
-  gem 'simplecov'
-  gem 'faker'
-end
+
+
+
+# # JS
+
+
+# # CSS
+
+
+# # rack/cors
+# gem 'font_assets'
+
+
+# group :development do
+#   gem 'figaro'
+#   gem 'rubocop', require: false
+#   gem 'better_errors'
+#   gem 'binding_of_caller'
+#   gem 'web-console'
+#   gem 'listen'
+#   gem 'spring'
+#   gem 'spring-watcher-listen'
+
+#   # CLI utilities
+#   gem 'html2slim', require: false
+#   gem 'seed_dump', require: false
+
+#   gem 'bullet'
+#   gem 'foreman'
+#   gem 'quiet_assets'
+
+#   # FE generators
+#   # gem 'rails_layout', require: false
+# end
+
+# group :test, :development do
+#   gem 'byebug'
+#   gem 'pry'
+#   gem 'pry-rails'
+#   gem 'pry-rescue'
+# end
+
+# group :test do
+#   gem 'temping'
+#   gem 'mocha'
+#   gem 'factory_girl_rails'
+#   gem 'database_rewinder'
+#   gem 'shoulda-matchers'
+#   gem 'simplecov'
+#   gem 'faker'
+# end
