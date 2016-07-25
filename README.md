@@ -23,9 +23,9 @@ ensure latest ruby build
 
 on osx, install and run [postgresapp](http://postgresapp.com/)
 
-install required ruby verision (2.3.0 at time of writing)
+install required ruby verision (2.3.1 at time of writing)
 
-    $ rbenv install 2.3.0
+    $ rbenv install 2.3.1
 
 install bundler
 
