@@ -4,6 +4,7 @@ gem 'rails', '~> 5.0.0'
 gem 'pg'#, '~> 0.18'
 gem 'puma'#, '~> 3.0'
 
+gem 'devise'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
@@ -32,8 +33,6 @@ group :production do
    gem 'newrelic_rpm'
 end
 
-
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
@@ -49,7 +48,6 @@ group :development do
   gem 'pry-rails'
   gem 'pry-rescue'
 end
-
 
 group :test do
   gem 'temping'
